@@ -41,8 +41,13 @@ layout: home
     <center><h3>Abstract</h3></center>
     <img src="figures/overview_v3.png" />
     <p>
-      Vector graphic documents present multiple visual elements, such as images, shapes, and texts. Choosing appropriate colors for multiple visual elements is challenging but crucial for amateurs and professional designers. Instead of creating a single color palette for all elements, we extract multiple color palettes from each visual element of a graphic document, and then combine them into a color sequence. We propose a masked color model for color sequence completion and recommend the specified colors based on the color context in multi-palette with high prob- ability. We train the model and build a color recommen- dation system on a large-scale dataset of vector graphic documents. The proposed color recommendation method outperformed other state-of-the-art methods by quantita- tive and qualitative evaluations on color prediction and our color recommendation system received positive feedback from professional designers in an interview study.
+      Vector graphic documents present multiple visual elements, such as images, shapes, and texts. Choosing appropriate colors for multiple visual elements is challenging but crucial for amateurs and professional designers. Instead of creating a single color palette for all elements, we extract multiple color palettes from each visual element of a graphic document, and then combine them into a color sequence. We propose a masked color model for color sequence completion and recommend the specified colors based on the color context in multi-palette with high probability. We train the model and build a color recommendation system on a large-scale dataset of vector graphic documents. The proposed color recommendation method outperformed other state-of-the-art methods by quantitative and qualitative evaluations on color prediction and our color recommendation system received positive feedback from professional designers in an interview study.
     </p>
+  </div>
+  
+  <div class="card">
+    <iframe src="https://www.youtube.com/watch?v=YmQrBdmvkoU">
+    </iframe>
   </div>
   
   <div class="card">
