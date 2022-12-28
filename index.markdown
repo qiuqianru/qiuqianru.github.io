@@ -38,7 +38,7 @@ layout: home
   </div>
     
   <div class="card">
-    <iframe src="https://www.youtube.com/embed/YmQrBdmvkoU">
+    <iframe width="680" height="380" src="https://www.youtube.com/embed/YmQrBdmvkoU">
     </iframe>
   </div>
   
