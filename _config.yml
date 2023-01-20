@@ -23,7 +23,7 @@ email: qiu_qianru@cyberagent.co.jp
 description: >- # this means to ignore newlines until "baseurl:"
   This is an offical project page of Color Recommendation for Vector Graphic Documents based on Multi-Palette Representation.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://multipalette.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://qiuqianru.github.io/multipalette" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  qiuqianru
 
