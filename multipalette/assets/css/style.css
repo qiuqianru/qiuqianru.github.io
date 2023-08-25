@@ -1,0 +1,54 @@
+:root {
+    /* font-family */
+    --ff-poppins: 'Poppins', sans-serif;
+
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 95%);
+    --smoky-black: hsl(0, 0%, 10%);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+    --bright-gray-1: hsl(0, 0%, 35%);
+    --bright-gray-2: hsl(0, 0%, 40%);
+    --light-gray: hsl(0, 0%, 84%);
+    --light-gray-70: hsla(0, 0%, 84%, 0.7);
+}
+
+html { font-family: var(--ff-poppins); }
+
+.main {
+    margin: auto;
+    width: 60%;
+}
+
+.site-header {
+    /* border-top: 5px solid var(--orange-yellow-crayola); */
+    border-bottom: 1px solid var(--light-gray);
+    /* background-color: var(--white-2); */
+    min-height: 55.95px;
+    line-height: 54px;
+    position: relative
+}
+
+.site-footer {
+    border-top: 1px solid var(--light-gray);
+    padding: 20px 0
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+iframe {
+    aspect-ratio: 16 / 9; 
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    font-family: var(--ff-poppins);
+}
