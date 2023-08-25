@@ -39,6 +39,12 @@ img {
     max-height: 100%;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 iframe {
     aspect-ratio: 16 / 9; 
     width: 100%;
@@ -46,8 +52,8 @@ iframe {
 }
 
 .card {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin: 10px;
+    box-shadow: var(--bright-gray-1) 0px 2px 8px 0px;
+    margin: 20px;
     padding: 15px;
     border-radius: 25px;
     font-family: var(--ff-poppins);

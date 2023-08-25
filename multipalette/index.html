@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qiu's home page</title>
   <head>
     <!--
       - custom css link
     -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
   </head>
 
 <body>
   <header class="site-header">
     <div class="main">
-      <a>Multi-Palette</a>
+      <a>MultiPalette</a>
     </div>
   </header>
 
@@ -40,8 +51,9 @@
     </div>
     
     <div class="card">
+      <center><h3>Video</h3></center>
       <!-- set video area -->
-      <iframe src="https://www.youtube.com/watch?v=YmQrBdmvkoU">
+      <iframe src="https://www.youtube.com/embed/YmQrBdmvkoU?si=0eOHTKKJlIvz0csm">
       </iframe>
     </div>
 
@@ -63,7 +75,9 @@
     
     <div class="card">
       <center><h3>Results</h3></center>
-      <img src="assets/images/recomm_samples.png" />
+      <div class="center">
+        <img width="600px" class="" src="assets/images/recomm_samples.png" />
+      </div>
       <p>
         Color recommendation results with our proposed BERT-based models with and without segment embeddings, and the Word2Vec-based model. The three samples are recolored with one image color, one SVG color, and one text color.
       </p>
