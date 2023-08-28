@@ -1,708 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>MM23 project page</title>
+  <head>
+    <!--
+      - custom css link
+    -->
+    <link rel="stylesheet" href="../assets/css/style_proj.css">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!--
-    - icons: font-awesome, academicons
-  -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</head>
+    <!--
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
 
 <body>
+  <header class="site-header">
+    <div class="main">
+      <a>Text2Palettes</a>
+    </div>
+  </header>
 
-  <!--
-    - #MAIN
-  -->
+  <div class="main">
+    <h1>
+      <center>
+        Multimodal Color Recommendation In Vector Graphic Documents
+      </center>
+    </h1>
+    <div>
+      <center>
+        <a href="https://qiuqianru.github.io/" target="_blank">Qianru Qiu</a>, 
+        <a href="https://xueting-wang.github.io/" target="_blank">Xueting Wang</a>, 
+        <a href="https://mayu-ot.github.io/" target="_blank">Mayu Otani</a>
+      </center>
+    </div>
+    <div>
+      <center>
+        <a href="https://cyberagent.ai/ailab/" target="_blank">CyberAgent AI Lab</a>
+      </center>
+    </div>
+    <div class="enforce">
+      <center>
+        <a href="https://arxiv.org/abs/2308.04118" target="_blank">[Paper]</a> 
+        [Code]
+      </center>
+    </div>
+    
+    <!-- <div class="card">
+      <center><h2>Video</h2></center>
+      <iframe src="https://www.youtube.com/embed/YmQrBdmvkoU?si=0eOHTKKJlIvz0csm">
+      </iframe>
+    </div> -->
 
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-photo.png" alt="Qianru Qiu" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Qianru Qiu">Qianru Qiu</h1>
-
-          <p class="title">Research scientist</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+    <div class="card">
+      <center><h2>Abstract</h2></center>
+      <img src="assets/images/overview.png" />
+      <p>
+        Color selection plays a critical role in graphic document design and requires sufficient consideration of various contexts.
+        However, recommending appropriate colors which harmonize with the other colors and textual contexts in documents is a challenging task, even for experienced designers.
+        In this study, we propose a multimodal masked color model that integrates both color and textual contexts to provide text-aware color recommendation for graphic documents. 
+        Our proposed model comprises self-attention networks to capture the relationships between colors in multiple palettes, and cross-attention networks that incorporate both color and CLIP-based text representations.
+        Our proposed method primarily focuses on color palette completion, which recommends colors based on the given colors and text. 
+        Additionally, it is applicable for another color recommendation task, full palette generation, which generates a complete color palette corresponding to the given text.
+        Experimental results demonstrate that our proposed approach surpasses previous color palette completion methods on accuracy, color distribution, and user experience, as well as full palette generation methods concerning color diversity and similarity to the ground truth palettes.
+      </p>
+    </div>
+    
+    <div class="card">
+      <center><h2>Method</h2></center>
+      <img width=50% src="assets/images/representation.png" />
+      <img width=49% src="assets/images/model.png" />
+      <p>
+        <center>(Left) Representation processes of color and text in a graphic document. (Right) Multimodal masked color model.</center>
+      </p>
+    </div>
+    
+    <div class="card">
+      <center><h2>Results of Color Palette Completion</h2></center>
+      <div class="center">
+        <img class="" src="assets/images/recolor_samples.png" />
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Tokyo, Japan</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="mailto:qiu_qianru@cyberagent.co.jp" class="social-link">
-              <i class="fa fa-envelope fa-2x"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=dFO1x5EAAAAJ&hl=ja" class="social-link">
-              <i class="ai ai-google-scholar ai-2x"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/qiuqianru" class="social-link">
-              <i class="fa fa-github fa-2x"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/%E9%82%B1-%E5%80%A9%E5%A6%82-40772564/?originalSubdomain=jp" class="social-link">
-              <i class="fa fa-linkedin-square fa-2x"></i>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>邱 倩如 (キュウ セイジョ)</p>
-          <p>I'm a research scientist at <a href="https://cyberagent.ai/ailab/" target="_blank">CyberAgent AI Lab</a>. 
-            My research lies in the areas of computer vision/machine learning, human-computer interaction, and affective engineering.</p>
-        </section>
-
-
-        <!--
-          - publication
-        -->
-
-        <section class="publication">
-
-          <h3 class="h3 paper-title">Selected publications</h3>
-
-          <ul class="publication-list">
-
-            <li class="publication-item">
-
-              <div class="publication-icon-box">
-                <img src="./assets/images/overview_MM23.png" width="350">
-              </div>
-
-              <div class="publication-content-box">
-                <h4 class="h4 publication-item-title">Multimodal Color Recommendation in Vector Graphic Documents</h4>
-                <p class="publication-item-text"><span class="underline">Qianru Qiu</span>, Xueting Wang, Mayu Otani</p>
-                <p class="publication-item-text italic">ACM MM2023</p>
-                <p class="publication-item-text"><a href="https://arxiv.org/abs/2308.04118" target="_blank">[Paper]</a> [Code] [Project page]</p>
-              </div>
-
-            </li>
-            <br>
-            <li class="publication-item">
-
-              <div class="publication-icon-box">
-                <img src="./assets/images/overview_WACV23.png" width="350">
-              </div>
-
-              <div class="publication-content-box">
-                <h4 class="h4 publication-item-title">Color Recommendation for Vector Graphic Documents based on Multi-Palette Representation</h4>
-                <p class="publication-item-text"><span class="underline">Qianru Qiu</span>, Xueting Wang, Mayu Otani, Yuki Iwazaki</p>
-                <p class="publication-item-text italic">WACV2023</p>
-                <p class="publication-item-text"><a href="https://openaccess.thecvf.com/content/WACV2023/papers/Qiu_Color_Recommendation_for_Vector_Graphic_Documents_Based_on_Multi-Palette_Representation_WACV_2023_paper.pdf" target="_blank">[Paper]</a>
-                   <a href="https://github.com/CyberAgentAILab/multipalette" target="_blank">[Code]</a> [Project page]</p>
-              </div>
-
-            </li>
-            <br>
-            <li class="publication-item">
-
-              <div class="publication-icon-box">
-                <img src="./assets/images/overview_IUI22.png" width="350">
-              </div>
-
-              <div class="publication-content-box">
-                <h4 class="h4 publication-item-title">An Intelligent Color Recommendation Tool for Landing Page Design</h4>
-                <p class="publication-item-text"><span class="underline">Qianru Qiu</span>, Mayu Otani, Yuki Iwazaki</p>
-                <p class="publication-item-text italic">IUI2022 Poster</p>
-                <p class="publication-item-text"><a href="https://dl.acm.org/doi/abs/10.1145/3490100.3516450" target="_blank">[Paper]</a></p>
-              </div>
-
-            </li>
-            <br>
-            <li class="publication-item">
-
-              <div class="publication-icon-box">
-                <img src="./assets/images/overview_IJAE18.png" width="350">
-              </div>
-
-              <div class="publication-content-box">
-                <h4 class="h4 publication-item-title">Affective font selection: The hybrid of japanese and latin typefaces</h4>
-                <p class="publication-item-text"><span class="underline">Qianru Qiu</span>, Shu Watanabe, Kengo Omura</p>
-                <p class="publication-item-text italic">International Journal of Affective Engineering, 2018</p>
-                <p class="publication-item-text"><a href="https://www.jstage.jst.go.jp/article/ijae/17/2/17_IJAE-D-17-00008/_article/-char/ja/" target="_blank">[Paper]</a></p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - Experience
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Experience</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="logo">
-                <img src="./assets/images/CA.png" alt="client logo">
-            </li>
-
-            <li class="logo">
-                <img src="./assets/images/FX_h.png" alt="client logo">
-            </li>
-
-            <li>
-                <img src="./assets/images/sjtu.png" alt="client logo">
-            </li>
-
-            <li>
-                <img src="./assets/images/zju.png" alt="client logo">
-            </li>
-
-            <li>
-                <img src="./assets/images/tsukuba.png" alt="client logo">
-            </li>
-
-            <li>
-                <img src="./assets/images/manchester.png" alt="client logo">
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Scientist</h4>
-
-              <span>2021.1 — Present</span>
-
-              <p class="timeline-text">AI Lab</p>
-              <p class="timeline-text">CyberAgent Inc.</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Scientist</h4>
-
-              <span>2014.7 — 2020.12</span>
-
-              <p class="timeline-text">R&D</p>
-              <p class="timeline-text">Fuji Xerox Co., Ltd</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Research Intern</h4>
-
-              <span>2012.9 — 2013.8</span>
-
-              <p class="timeline-text">R&D</p>
-              <p class="timeline-text">Fuji Xerox Co., Ltd</p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Master's Degree in Software Engineering</h4>
-
-              <span>2011.9 — 2014.6</span>
-
-              <p class="timeline-text">Shanghai Jiao Tong University</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Bachelor's Degree in Software Engineering</h4>
-
-              <span>2007.9 — 2011.6</span>
-
-              <p class="timeline-text">Zhejiang University</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Exchange student in Information Science</h4>
-
-              <span>2010.9 — 2011.3</span>
-
-              <p class="timeline-text">Kitagawa Data Engineering Lab</p>
-              <p class="timeline-text">University of Tsukuba</p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Exchange student in English</h4>
-
-              <span>2010.2</span>
-
-              <p class="timeline-text">The University of Manchester</p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Certification</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Color Coordinator Certification Grade 2</h4>
-
-              <p class="timeline-text">The Tokyo Chamber of Commerce and Industry</p>
-
-            </li>
-
-          </ol>
-          
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
+      <p>
+        Color recommendation results with our proposed method, <a href="https://qiuqianru.github.io/multipalette/" target="_blank">Qiu et al.</a>, and random color selection. 
+        The selectedcolors for recoloring are marked with ‘✓’. In the first sample, three colors in image element are recolored. 
+        In the second sample, two colors are recolored: one in graphic element and the other in text element. 
+        In the third sample, one color in graphic element is recolored. 
+        (b) Text and Palettes are extracted from GT, including text contents (TC), image labels (IL), and the palettes of image, graphic, and text elements.
+      </p>
     </div>
 
-  </main>
+    <div class="card">
+      <center><h2>Results of Full Palette Generation</h2></center>
+      <div class="center">
+        <img class="" src="assets/images/generation_samples_res8.png" />
+      </div>
+      <p>
+        Generated palette results of our proposed method and the related work <a href="https://openaccess.thecvf.com/content_ECCV_2018/papers/Hyojin_Bahng_Coloring_with_Words_ECCV_2018_paper.pdf" target="_blank">TPN</a> with the ground truth.
+        PP (post-processing) is to eliminate duplicated colors in a palette.
+      </p>
+    </div>
+  </div>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
+  <footer class="site-footer"></footer>
 </body>
-
 </html>
